@@ -1,9 +1,6 @@
-var express = require('express');
-var router = express.Router();
+module.exports = app =>
+{
+  require('./login')(app);
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
-
-module.exports = router;
+  app.get('/', (req, res) => { res.redirect('/login'); });
+};

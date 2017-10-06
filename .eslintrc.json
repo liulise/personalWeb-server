@@ -1,0 +1,148 @@
+{
+  "root": true,
+  "env": { "node": true },
+  "globals": { "global": false },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType ": "module"
+  },
+
+  "rules": {
+
+    // 必须对new出的实例进行保存
+    // @link http://eslint.org/docs/rules/no-new.html
+    "no-new": "error",
+
+
+    // 禁止使用按位操作符
+    // @link http://eslint.org/docs/rules/no-bitwise.html
+    "no-bitwise": "error",
+
+
+    // 关闭具名函数限制
+    // @link http://eslint.org/docs/rules/func-names.html
+    "func-names": "off",
+
+
+    // 关闭 console 限制
+    // @link http://eslint.org/docs/rules/no-console.html
+    "no-console": "off",
+
+
+    // 关闭 ++， -- 限制
+    // @link http://eslint.org/docs/rules/no-plusplus.html
+    "no-plusplus": "off",
+
+
+    // 关闭 continue 限制
+    // @link http://eslint.org/docs/rules/no-continue.html
+    "no-continue": "off",
+
+
+    // 关闭变量顶部声明限制
+    // @link http://eslint.org/docs/rules/vars-on-top.html
+    "vars-on-top": "off",
+
+
+    // 关闭尾属性强制逗点
+    // @link http://eslint.org/docs/rules/comma-dangle.html
+    "comma-dangle": "off",
+
+
+    // 关闭require()全局引入限制
+    // @link http://eslint.org/docs/rules/global-require.html
+    "global-require": "off",
+
+
+    // 正则表达式中不允许出现控制字符
+    // @link http://eslint.org/docs/rules/no-control-regex.html
+    "no-control-regex": "error",
+
+
+    // 不允许使用无意义的字符转义
+    // @link http://eslint.org/docs/rules/no-useless-escape.html
+    "no-useless-escape": "off",
+
+
+    // 允许直接修改参数
+    // @link http://eslint.org/docs/rules/no-param-reassign.html
+    "no-param-reassign": "off",
+
+
+    // 禁止行尾空格
+    // @link http://eslint.org/docs/rules/no-trailing-spaces.html
+    "no-trailing-spaces": "error",
+
+
+    // 禁止操作符混用 (可用括号分组隔离)
+    // @link http://eslint.org/docs/rules/no-mixed-operators.html
+    "no-mixed-operators": "error",
+
+
+    // 允许使用下划线前缀
+    // @link http://eslint.org/docs/rules/no-underscore-dangle.html
+    "no-underscore-dangle": "off",
+
+    // 不允许使用 for in, 以及 with 等
+    // @link http://eslint.org/docs/rules/no-restricted-syntax.html
+    "no-restricted-syntax": ["error", "ForInStatement", "LabeledStatement", "WithStatement"],
+
+
+    // 缩进为2个空格，switch为1个
+    // @link http://eslint.org/docs/rules/indent.html
+    "indent": ["error", 2, { "SwitchCase": 1 }],
+
+
+    // new一个对象时，被new对象必须首字母大写
+    // @link http://eslint.org/docs/rules/new-cap.html
+    "new-cap": [2, { "newIsCap": true, "capIsNew": false }],
+
+
+    // 代码块最大嵌套层数 4
+    // @link http://eslint.org/docs/rules/max-depth.html
+    "max-depth": ["error", 4],
+
+
+    // 最大线性分支逻辑路径数量 20
+    // @link http://eslint.org/docs/rules/complexity.html
+    "complexity": ["error", 20],
+
+
+    // 对象属性名不允许使用引号(特殊情况除外)
+    // @link http://eslint.org/docs/rules/quote-props.html
+    "quote-props": ["error", "as-needed"],
+
+
+    // 箭头函数参数为单个时，允许省略括号
+    // @link http://eslint.org/docs/rules/arrow-parens.html
+    "arrow-parens": ["error", "as-needed"],
+
+
+    // 箭头函数不允许带花括号(多行或无返回值除外)
+    // @link http://eslint.org/docs/rules/arrow-body-style.html
+    "arrow-body-style": ["error", "as-needed"],
+
+
+    // 对象内的属性定义采用简写形式，属性名禁止使用引号(特殊情况除外)
+    // @link http://eslint.org/docs/rules/object-shorthand.html
+    "object-shorthand": ["error", "always", { "avoidQuotes": true }],
+
+
+    // 回调最大嵌套层数 3
+    // @link http://eslint.org/docs/rules/max-nested-callbacks.html
+    "max-nested-callbacks": ["error", 3],
+
+
+    // 最大长度 130 字符，忽略 url
+    // @link http://eslint.org/docs/rules/max-len.html
+    "max-len": ["error", 130, 2, { "ignoreUrls": true }],
+
+
+    // 花括号采用奥尔曼风格, 但允许出现单行书写
+    // @link http://eslint.org/docs/rules/brace-style.html
+    "brace-style": ["error", "allman", { "allowSingleLine": true }],
+
+    // 不允许未使用的变量
+    "no-unused-vars": ["error", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }]
+  }
+}
