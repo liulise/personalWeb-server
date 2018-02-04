@@ -26,6 +26,8 @@
 
   // 自定义规则
   "rules": {
+    "arrow-parens": 0,
+    "prefer-spread": 0,
     "no-console": 0,
     "global-require": 0,
     "brace-style": [2, "allman", { "allowSingleLine": true }],

@@ -5,14 +5,15 @@
 
 const path = require('path');
 const express = require('express');
+
 const app = express();
-const static = path.resolve(__dirname, '../public');
+const staticUrl = path.resolve(__dirname, '../public');
 
-app.use('/public', express.static(static));
-
-app.use(() =>
+app.use('/public', express.static(staticUrl));
+app.use((req, res) =>
 {
-  console.log(static);
+  res.writeHead(404);
+  res.end();
 });
 
 exports.listen = (...args) =>
