@@ -23,6 +23,9 @@
     "nodemon": "^1.14.11"
   },
   "dependencies": {
-    "express": "^4.16.2"
+    "connect": "^3.6.6",
+    "express": "^4.16.2",
+    "koa": "^2.5.0",
+    "request": "^2.83.0"
   }
 }
