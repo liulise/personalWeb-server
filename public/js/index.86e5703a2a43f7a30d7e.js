@@ -1537,7 +1537,7 @@ var World = function (_React$Component) {
     value: function handleClick() {
       var _this3 = this;
 
-      _axios2.default.get('/key').then(function (_ref) {
+      _axios2.default.get('/api/home/a').then(function (_ref) {
         var data = _ref.data;
 
         _this3.setState({ data: data });
@@ -1548,7 +1548,7 @@ var World = function (_React$Component) {
     value: function handleClick2() {
       var _this4 = this;
 
-      _axios2.default.get('/home/index').then(function (_ref2) {
+      _axios2.default.get('/api/home/b/index').then(function (_ref2) {
         var data = _ref2.data;
 
         _this4.setState({ data: data });
@@ -3414,4 +3414,4 @@ module.exports = function spread(callback) {
 
 /***/ })
 ],[52]);
-//# sourceMappingURL=index.2840b0f8cc715adb0ca1.js.map
+//# sourceMappingURL=index.86e5703a2a43f7a30d7e.js.map

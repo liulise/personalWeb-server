@@ -2,8 +2,17 @@
  * Created by admin on 2018/1/27. 一月
  * yujie
  */
-
-exports.index = (req, res) =>
+const mongo = require('../../../mongodb/index');
+exports.index = (req, res, next) =>
 {
-  res.json({ a: 123 });
+  mongo.then(db =>
+  {
+    db.collection("users").findOne({})
+      .then(user =>
+      {
+        console.log(user);
+        res.send(user);
+      })
+      .catch(err => next(err));
+  });
 };
